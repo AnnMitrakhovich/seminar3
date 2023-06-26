@@ -1,4 +1,29 @@
-﻿// int[] InputSomeNums()
+﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+int InputAB(string message)
+{
+	Console.Write(message);
+	int num = int.Parse(Console.ReadLine()!);
+	return num;
+}
+int a = InputAB("Введите число А: ");
+int b = InputAB("Введите число В: ");
+
+int StepNumber (int a1, int b1)
+{
+    int step = b1;
+    int result = 1;
+    for (int i = 0; i < step; i++) result = result * a1;
+    return result;
+}
+int res = StepNumber(a,b);
+Console.WriteLine(res);
+
+
+
+
+// int[] InputSomeNums()
 // {
 //     Console.Write("Введите количество чисел: ");
 //     int size = int.Parse(Console.ReadLine()!);
