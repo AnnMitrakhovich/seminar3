@@ -24,26 +24,50 @@
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
-int InputNumber(string message)
-{
-	Console.Write(message);
-	int num = int.Parse(Console.ReadLine()!);
-	return num;
-}
-int SumDigits (int n)
-{
-    int sum = 0;
-    while (n != 0) 
-    {
-        sum += n % 10;
-        n /= 10;
-    }
+// int InputNumber(string message)
+// {
+// 	Console.Write(message);
+// 	int num = int.Parse(Console.ReadLine()!);
+// 	return num;
+// }
+// int SumDigits (int n)
+// {
+//     int sum = 0;
+//     while (n != 0) 
+//     {
+//         sum += n % 10;
+//         n /= 10;
+//     }
 
-    return sum;
+//     return sum;
+// }
+// int n1 = InputNumber("Enter N: ");
+// int res = SumDigits (n1);
+// Console.WriteLine(res);
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+int[] FillArray (int length)
+{
+    int[] arr = new int [length];
+    for (int i = 0; i < length; i++) 
+    {
+        arr[i] = new Random().Next(1, 100);
+    }
+    return arr;
 }
-int n1 = InputNumber("Enter N: ");
-int res = SumDigits (n1);
-Console.WriteLine(res);
+void PrintArray (int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+}
+int [] newArr = FillArray(8);
+PrintArray(newArr);
+
 
 
 // int[] InputSomeNums()
